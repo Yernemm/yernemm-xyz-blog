@@ -52,7 +52,22 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 
 <!--~~ Raw markup ~~-->
 
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
 
 </head>
 <body class="tc-body">
@@ -177,6 +192,14 @@ Error message and password prompt
 
 <li>$:/DefaultTiddlers</li>
 
+<li>$:/GitHub/Filename</li>
+
+<li>$:/GitHub/Path</li>
+
+<li>$:/GitHub/Repo</li>
+
+<li>$:/GitHub/Username</li>
+
 <li>$:/GoogleAnalyticsAccount</li>
 
 <li>$:/GoogleAnalyticsDomain</li>
@@ -198,6 +221,10 @@ Error message and password prompt
 <li>$:/SiteSubtitle</li>
 
 <li>$:/SiteTitle</li>
+
+<li>$:/state/tab-1749438307</li>
+
+<li>$:/state/tab-2065006209</li>
 
 <li>$:/StoryList</li>
 
@@ -9498,6 +9525,18 @@ Error message and password prompt
 <div created="20190314140234659" modified="20190712023101115" title="$:/DefaultTiddlers">
 <pre>[[Yer's Tiddly Blog]]</pre>
 </div>
+<div created="20191227031338443" modified="20191227031342917" title="$:/GitHub/Filename">
+<pre>index.html</pre>
+</div>
+<div created="20191227031311660" modified="20191227031311660" title="$:/GitHub/Path">
+<pre>/</pre>
+</div>
+<div created="20191227031328977" modified="20191227031333844" title="$:/GitHub/Repo">
+<pre>Yernemm/yernemm-xyz-blog</pre>
+</div>
+<div created="20191227031302147" modified="20191227031303221" title="$:/GitHub/Username">
+<pre>Yernemm</pre>
+</div>
 <div created="20190714022752287" modified="20190714022752287" title="$:/GoogleAnalyticsAccount">
 <pre>UA-87387417-1</pre>
 </div>
@@ -9885,7 +9924,13 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20190314140229276" modified="20190712023141447" title="$:/SiteTitle">
 <pre>Yernemm</pre>
 </div>
-<div list="" title="$:/StoryList">
+<div created="20191227031247390" modified="20191227031248286" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Saving</pre>
+</div>
+<div created="20191227031249890" modified="20191227031249890" title="$:/state/tab-2065006209">
+<pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
+</div>
+<div created="20191227031244853" list="$:/ControlPanel [[Yer's Tiddly Blog]]" modified="20191227031244853" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9901,15 +9946,15 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;https://tiddlywiki.com/upgrade.html&quot;
+            &quot;text&quot;: &quot;https://yernemm.xyz/blog/&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
-            &quot;text&quot;: &quot;tiddlywiki.com&quot;
+            &quot;text&quot;: &quot;yernemm.xyz&quot;
         },
         &quot;$:/info/url/hostname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/hostname&quot;,
-            &quot;text&quot;: &quot;tiddlywiki.com&quot;
+            &quot;text&quot;: &quot;yernemm.xyz&quot;
         },
         &quot;$:/info/url/protocol&quot;: {
             &quot;title&quot;: &quot;$:/info/url/protocol&quot;,
@@ -9921,7 +9966,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/upgrade.html&quot;
+            &quot;text&quot;: &quot;/blog/&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9929,7 +9974,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;https://tiddlywiki.com&quot;
+            &quot;text&quot;: &quot;https://yernemm.xyz&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
